@@ -15,8 +15,9 @@ module.exports = {
   // 自定义编码校验规则
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     // 'semi': 'off'
     // 'semi': ['error', 'always']
+    'comma-dangle': ['error', 'only-multiline']
   }
 }

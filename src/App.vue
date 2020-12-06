@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <h1 class="text">拉勾教育</h1>
-    <el-button>Button</el-button>
-
     <router-view/>
   </div>
 </template>
