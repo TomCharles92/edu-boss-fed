@@ -40,11 +40,15 @@ export default Vue.extend({
       user: {}
     }
   },
-  async created () {
-    const { data } = await getUserInfo()
-    this.user = data.content
+  created () {
+    this.loadUserInfo()
   },
   methods: {
+    async loadUserInfo () {
+      const { data } = await getUserInfo()
+      this.user = data.content
+    },
+
     handleLogout () {
       this.$confirm('确定退出？', '提示', {
         confirmButtonText: '退出',
