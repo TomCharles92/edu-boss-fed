@@ -2,25 +2,27 @@
   <el-menu
     default-active="2"
     @open="handleOpen"
-    @close="handleClose">
+    @close="handleClose"
+    router
+  >
     <el-submenu index="1">
       <template slot="title">
         <i class="el-icon-location"></i>
         <span>权限管理</span>
       </template>
-      <el-menu-item index="1-1">角色管理</el-menu-item>
-      <el-menu-item index="1-1">菜单管理</el-menu-item>
-      <el-menu-item index="1-1">资源管理</el-menu-item>
+      <el-menu-item index="/role">角色管理</el-menu-item>
+      <el-menu-item index="/menu">菜单管理</el-menu-item>
+      <el-menu-item index="/resource">资源管理</el-menu-item>
     </el-submenu>
-    <el-menu-item index="2">
+    <el-menu-item index="/course">
       <i class="el-icon-menu"></i>
       <span slot="title">课程管理</span>
     </el-menu-item>
-    <el-menu-item index="3">
+    <el-menu-item index="/user">
       <i class="el-icon-document"></i>
       <span slot="title">用户管理</span>
     </el-menu-item>
-    <el-menu-item index="4">
+    <el-menu-item index="/advert">
       <i class="el-icon-setting"></i>
       <span slot="title">广告管理</span>
     </el-menu-item>
