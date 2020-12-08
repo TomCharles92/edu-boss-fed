@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    default-active="2"
+    :default-active="currentRoute"
     @open="handleOpen"
     @close="handleClose"
     router
@@ -33,6 +33,11 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'AppSidebar',
+  computed: {
+    currentRoute () {
+      return this.$route.fullPath
+    }
+  },
   methods: {
     handleOpen (key: string, keyPath: string): void {
       console.log(key, keyPath)

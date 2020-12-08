@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ResourcesList from './components/list.vue'
+import ResourcesList from './components/List.vue'
 
 export default Vue.extend({
   name: 'ResourceIndex',
