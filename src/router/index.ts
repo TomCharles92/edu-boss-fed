@@ -33,6 +33,16 @@ const routes: Array<RouteConfig> = [
         component: () => import(/* webpackChunkName: 'menu' */ '@/views/menu/index.vue')
       },
       {
+        path: '/menu/create',
+        name: 'menu-create',
+        component: () => import(/* webpackChunkName: 'menu-create' */ '@/views/menu/create.vue')
+      },
+      {
+        path: '/menu/:id/edit',
+        name: 'menu-edit',
+        component: () => import(/* webpackChunkName: 'menu-edit' */ '@/views/menu/edit.vue')
+      },
+      {
         path: '/resource',
         name: 'resource',
         component: () => import(/* webpackChunkName: 'resource' */ '@/views/resource/index.vue')
@@ -50,7 +60,7 @@ const routes: Array<RouteConfig> = [
       {
         path: '/advert',
         name: 'advert',
-        component: () => import(/* webpackChunkName: 'advertIndex' */ '@/views/advert/index.vue')
+        component: () => import(/* webpackChunkName: 'my-advert' */ '@/views/advert/index.vue')
       },
       {
         path: '/advert-space',
