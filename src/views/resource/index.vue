@@ -1,11 +1,16 @@
 <template>
-  <div>Resource</div>
+  <div>
+    <ResourcesList />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import ResourcesList from './components/list.vue'
+
 export default Vue.extend({
-  name: 'ResourceIndex'
+  name: 'ResourceIndex',
+  components: { ResourcesList }
 })
 </script>
 

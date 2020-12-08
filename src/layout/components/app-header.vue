@@ -72,7 +72,7 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .el-dropdown {
+  .el-dropdown-link {
     display: flex;
     align-items: center;
   }
