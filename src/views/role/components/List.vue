@@ -13,7 +13,13 @@
         <el-table-column label="操作">
           <template v-slot="scope">
             <div class="center">
-              <el-button type="text">分配菜单</el-button>
+              <el-button
+                type="text"
+                @click="$router.push({
+                    name: 'allot-menu',
+                    params: { roleId: scope.row.id }
+                  })"
+              >分配菜单</el-button>
               <el-button type="text">分配资源</el-button>
             </div>
             <div class="center">
@@ -147,7 +153,7 @@ export default Vue.extend({
           console.log(err)
           this.$message.info('已取消删除')
         })
-    }
+    },
 
   }
 })

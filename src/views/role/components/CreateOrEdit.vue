@@ -9,7 +9,7 @@
     <el-form-item prop="description" label="角色描述">
       <el-input v-model="form.description"></el-input>
     </el-form-item>
-    <el-form-item>
+    <el-form-item style="text-align: right">
       <el-button @click="$emit('cancel')">取 消</el-button>
       <el-button type="primary" @click="onSubmit">确 定</el-button>
     </el-form-item>

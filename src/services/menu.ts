@@ -4,7 +4,7 @@
 
 import request from '@/utils/request'
 
-interface Menu {
+export interface Menu {
   id?: number;
   name: string;
   href: string;
@@ -13,6 +13,8 @@ interface Menu {
   icon?: string;
   shown?: boolean;
   orderNum?: number;
+  selected?: boolean;
+  subMenuList?: Menu;
 }
 
 export const createOrUpdateMenu = (data: Menu) => {
@@ -44,5 +46,33 @@ export const deleteMenu = (id: number) => {
   return request({
     method: 'DELETE',
     url: `/boss/menu/${id}`
+  })
+}
+
+export const getMenuNodeList = () => {
+  return request({
+    method: 'GET',
+    url: '/boss/menu/getMenuNodeList'
+  })
+}
+
+export const getRoleMenus = (roleId: number | string) => {
+  return request({
+    method: 'GET',
+    url: '/boss/menu/getRoleMenus',
+    params: {
+      roleId
+    }
+  })
+}
+
+export const allocateRoleMenus = (roleId: number | string, menuIdList: Array<number>) => {
+  return request({
+    method: 'POST',
+    url: '/boss/menu/allocateRoleMenus',
+    data: {
+      roleId,
+      menuIdList
+    }
   })
 }
