@@ -42,3 +42,12 @@ export const getRole = (id: number) => {
     url: `/boss/role/${id}`
   })
 }
+
+// 给用户分配角色
+export const allocateUserRoles = (userId: number, roleIdList: number[]) => {
+  return request({
+    method: 'POST',
+    url: '/boss/role/allocateUserRoles',
+    data: { userId, roleIdList }
+  })
+}

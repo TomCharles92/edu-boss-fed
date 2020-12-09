@@ -30,10 +30,7 @@ export default Vue.extend({
   background-color: #fff;
 }
 
-.el-aside {
-  background-color: #D3DCE6;
-  height: 100vh;
-}
+// .el-aside {}
 
 .el-main {
   background-color: #E9EEF3;
