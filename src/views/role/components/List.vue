@@ -9,7 +9,9 @@
         <el-table-column type="index" label="编号"></el-table-column>
         <el-table-column prop="name" label="角色名称"></el-table-column>
         <el-table-column prop="description" label="角色描述"></el-table-column>
-        <el-table-column prop="createdTime" label="创建时间"></el-table-column>
+        <el-table-column prop="createdTime" label="创建时间">
+          <template v-slot="scope">{{ scope.row.createdTime | dateF }}</template>
+        </el-table-column>
         <el-table-column label="操作">
           <template v-slot="scope">
             <div class="center">

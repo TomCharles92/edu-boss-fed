@@ -16,9 +16,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    // 'semi': 'off'
-    // 'semi': ['error', 'always']
     'comma-dangle': ['error', 'only-multiline'],
-    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }]
+    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    // 忽略 TS 的 any 警告
+    '@typescript-eslint/no-explicit-any': ['off']
   }
 }

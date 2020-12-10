@@ -5,6 +5,7 @@ import store from './store'
 import ElementUI from 'element-ui'
 // 包含了 Element 的样式
 import '@/styles/index.scss'
+import '@/utils/filter'
 
 Vue.use(ElementUI)
 

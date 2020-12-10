@@ -8,7 +8,7 @@
         <el-table-column prop="name" label="用户名"></el-table-column>
         <el-table-column prop="phone" label="手机号"></el-table-column>
         <el-table-column prop="createTime" label="注册时间">
-          <template v-slot="scope">{{ format(scope.row.createTime) }}</template>
+          <template v-slot="scope">{{ scope.row.createTime | dateF }}</template>
         </el-table-column>
         <el-table-column label="操作">
           <template v-slot="scope">
@@ -58,7 +58,6 @@
 import Vue from 'vue'
 import { getUserPages, getUserRole } from '@/services/user'
 import { getAllRoles, allocateUserRoles } from '@/services/role'
-import dayjs from 'dayjs'
 
 export default Vue.extend({
   name: 'UserIndex',
@@ -117,10 +116,6 @@ export default Vue.extend({
     handleCurrentChange (val: number) {
       this.form.currentPage = val
       this.loadUserPage()
-    },
-
-    format (createTime: string) {
-      return dayjs(createTime).format('YYYY-MM-DD HH:mm:ss')
     },
 
     // 分配角色

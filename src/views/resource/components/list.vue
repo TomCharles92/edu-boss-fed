@@ -31,7 +31,9 @@
       <el-table-column prop="name" label="资源名称"></el-table-column>
       <el-table-column prop="url" label="资源路径"></el-table-column>
       <el-table-column prop="description" label="描述"></el-table-column>
-      <el-table-column prop="updatedTime" label="更新时间"></el-table-column>
+      <el-table-column prop="updatedTime" label="更新时间">
+        <template v-slot="scope">{{ scope.row.updatedTime | dateF }}</template>
+      </el-table-column>
       <el-table-column prop="date" label="操作"></el-table-column>
     </el-table>
     <!-- 分页 -->

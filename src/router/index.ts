@@ -14,7 +14,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     component: layout,
-    redirect: '/home',
+    redirect: '/course',
     meta: { requiresAuth: true },
     children: [
       {
@@ -57,6 +57,17 @@ const routes: Array<RouteConfig> = [
         path: '/course',
         name: 'course',
         component: () => import(/* webpackChunkName: 'course' */ '@/views/course/index.vue')
+      },
+      {
+        path: '/course/create',
+        name: 'course-create',
+        component: () => import(/* webpackChunkName: 'course-create' */ '@/views/course/create.vue')
+      },
+      {
+        path: '/course/:courseId/edit',
+        name: 'course-edit',
+        props: true,
+        component: () => import(/* webpackChunkName: 'course-edit' */ '@/views/course/edit.vue')
       },
       {
         path: '/user',
