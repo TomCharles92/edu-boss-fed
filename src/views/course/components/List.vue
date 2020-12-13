@@ -54,7 +54,13 @@
                 params: { courseId: scope.row.id }
               })"
             >编辑</el-button>
-            <el-button type="text">内容管理</el-button>
+            <el-button
+              type="text"
+              @click="$router.push({
+                name: 'course-section',
+                params: { courseId: scope.row.id }
+              })"
+            >内容管理</el-button>
           </template>
         </el-table-column>
       </el-table>
