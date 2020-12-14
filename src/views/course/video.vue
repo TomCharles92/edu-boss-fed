@@ -127,7 +127,7 @@ export default Vue.extend({
           console.log('onUploadEnd', uploadInfo)
           // 请求转码
           const { data } = await aliyunTransCode({
-            lessonId: this.$route.query.lessionId,
+            lessonId: this.$route.query.lessonId,
             coverImageUrl: this.imageURL,
             fileName: (this.video as any).files[0].name,
             fileId: this.videoId
@@ -136,7 +136,7 @@ export default Vue.extend({
 
           // 轮询查询转码进度
           const timer = setInterval(async () => {
-            const { data } = await aliyunTransCodePercent(this.$route.query.lessionId as string)
+            const { data } = await aliyunTransCodePercent(this.$route.query.lessonId as string)
             console.log(data.data)
             if (data.data === 100) {
               this.isTransCodeSuccess = true

@@ -36,7 +36,7 @@
             params: { courseId },
             query: {
               sectionId: data.sectionId,
-              lessionId: data.id
+              lessonId: data.id
             }
           })">上传视频</el-button>
           <el-select

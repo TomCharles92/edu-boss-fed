@@ -27,10 +27,10 @@ export const aliyunTransCode = (data: any) => {
   })
 }
 
-export const aliyunTransCodePercent = (lessionId: number | string) => {
+export const aliyunTransCodePercent = (lessonId: number | string) => {
   return request({
     method: 'GET',
     url: '/boss/course/upload/aliyunTransCodePercent.json',
-    params: { lessionId }
+    params: { lessonId }
   })
 }
