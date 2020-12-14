@@ -30,8 +30,15 @@
         </span>
         <!-- lession -->
         <span v-else>
-          <el-button @click="editLession(data)">编辑</el-button>
-          <el-button type="success">上传视频</el-button>
+          <el-button @click="editLession(data, node)">编辑</el-button>
+          <el-button type="success" @click="$router.push({
+            name: 'course-video',
+            params: { courseId },
+            query: {
+              sectionId: data.sectionId,
+              lessionId: data.id
+            }
+          })">上传视频</el-button>
           <el-select
             v-model="data.status"
             @change="changeLessionStatus(data)"
@@ -200,7 +207,6 @@ export default Vue.extend({
     },
 
     editLession (data: any) {
-      console.log(data)
       this.sessionInfo = {
         courseId: this.course.id,
         courseName: this.course.courseName,
