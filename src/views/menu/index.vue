@@ -1,9 +1,10 @@
 <template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      <el-button @click="$router.push({ name: 'menu-create' })">新增菜单</el-button>
+      <el-button type="primary" @click="$router.push({ name: 'menu-create' })">新增菜单</el-button>
     </div>
 
+    <!-- 菜单列表 -->
     <el-table :data="menus" style="width: 100%">
       <el-table-column type="index" label="编号"></el-table-column>
       <el-table-column prop="name" label="菜单名称"></el-table-column>
@@ -17,6 +18,19 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <!-- 分页 -->
+    <!-- <el-pagination
+      style="margin-top: 20px"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :disabled="isLoading"
+      :current-page.sync="form.currentPage"
+      :page-sizes="[5, 10, 15, 20]"
+      :page-size="form.pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="total">
+    </el-pagination> -->
   </el-card>
 </template>
 

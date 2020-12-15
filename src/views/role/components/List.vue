@@ -2,7 +2,7 @@
   <div>
     <el-card>
       <div slot="header">
-        <el-button @click="createRole">新增角色</el-button>
+        <el-button type="primary" @click="createRole">新增角色</el-button>
       </div>
       <!-- 角色列表 -->
       <el-table :data="roles" v-loading="isLoading">

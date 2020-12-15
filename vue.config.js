@@ -1,5 +1,6 @@
 module.exports = {
   devServer: {
+    port: 3100,
     proxy: {
       '/boss': {
         target: 'http://eduboss.lagou.com',
