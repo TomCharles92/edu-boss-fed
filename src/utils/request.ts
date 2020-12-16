@@ -12,6 +12,7 @@ const request: AxiosInstance = axios.create({
 request.interceptors.request.use(function (config) {
   const { user } = store.state
   if (user && user.access_token) {
+    // 给所有请求添加 header: token
     config.headers.Authorization = user.access_token
   }
   return config

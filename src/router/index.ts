@@ -110,6 +110,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  // matched：所有嵌套的路由
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (!store.state.user) {
       next({
